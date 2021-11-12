@@ -38,7 +38,7 @@
   width: 50px;
   font-weight: lighter;
 }
-article {
+.meal__infos{
   box-shadow: 0 0 10px #ececec;
   margin: 5%;
   border-radius: 10px;
@@ -57,4 +57,7 @@ article {
 .description span {
   font-weight: bold;
   margin-right: 10px;
+}
+.order__page{
+  height: 100px;
 }
