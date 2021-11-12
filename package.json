@@ -4,8 +4,16 @@
   "description": "Ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./main.scss:./style.css"
+    "sass": "sass --watch ./main.scss:./style.css" 
   },
   "author": "Ramis Alexis",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexisRamis/RamisAlexis_3_26102021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlexisRamis/RamisAlexis_3_26102021/issues"
+  },
+  "homepage": "https://github.com/AlexisRamis/RamisAlexis_3_26102021#readme"
 }
