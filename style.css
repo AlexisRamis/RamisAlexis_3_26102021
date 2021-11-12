@@ -189,13 +189,13 @@ footer {
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
   top: 220px;
-  margin-bottom: 60%;
+  margin-bottom: 70%;
   padding-top: 3%;
   font-family: Shrikhand;
 }
 
 .title h2 {
-  margin-left: -10%;
+  margin-left: -5%;
 }
 
 /*menu*/
@@ -207,7 +207,7 @@ footer {
 
 .meal-type {
   border-bottom: solid 2px #99e2d0;
-  margin: 10px;
+  margin: 10px 10px 10px 25px;
   width: 50px;
   font-weight: lighter;
 }
