@@ -6,7 +6,6 @@ body {
 a {
   text-decoration: none;
 }
-
 /*header*/
 .logo {
   .logo__img {
@@ -35,7 +34,7 @@ a {
 .button {
   border-radius: 30px 30px 30px 30px;
   border: none;
-  background-color: #d96cdb;
+  background: linear-gradient(175deg, #ff79da 10%, #9356dc 95%);
   padding: 20px 40px 20px 40px;
   cursor: pointer;
 
@@ -44,23 +43,44 @@ a {
   }
 }
 /*how to*/
-.howto h2 {
-  margin-left: 20px;
-  margin-top: 100px;
+.howto {
+  .howto__h2 {
+    margin-left: 20px;
+    margin-top: 100px;
+  }
+  .howto__step {
+    margin-left: -4%;
+    .howto__step__li {
+      list-style-type: none;
+      .howto__step__li__p {
+        background-color: #9257dc;
+        height: 25px;
+        width: 30px;
+        border-radius: 50%;
+        padding-top: 5px;
+        position: absolute;
+      }
+    }
+  }
 }
-.step {
-  margin-left: -8%;
+.howto-background {
+  font-weight: 500;
+  width: 80%;
+  border-radius: 20px;
+  background: #f6f6f6;
+  box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+  margin-left: 30px;
 }
-.step li p {
-  background-color: #9257dc;
-  height: 25px;
-  width: 30px;
-  border-radius: 50%;
-  padding-top: 5px;
+.howto-background span{
+  font-weight: 600;
 }
-.step li i:hover {
+.howto__step__li__i{
+  padding-left: 20px;
+}
+.howto__step__li__i:hover {
   color: #9257dc;
 }
+
 li {
   list-style-type: none;
 }
@@ -68,6 +88,18 @@ li {
 
 #restaurants h2 {
   margin-left: 20px;
+}
+.new {
+  font-weight: 500;
+  position: absolute;
+  color: #278870;
+  background-color: #99e2d0;
+  right: 50px;
+  width: 20%;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 .img-restaurants img {
   object-fit: cover;

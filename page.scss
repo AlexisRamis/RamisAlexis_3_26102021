@@ -2,15 +2,15 @@
 .header {
   margin: 0;
 }
-.logo__i {
-  color: black;
-}
 .header__img {
   height: 250px;
   object-fit: cover;
   width: 100%;
   position: absolute;
   top: 70px;
+}
+.logo__i {
+  color: black;
 }
 .title {
   position: relative;
@@ -24,41 +24,115 @@
   font-family: Shrikhand;
 }
 .title h2 {
-  margin-left: -05%;
+  margin-left: -5%;
 }
 /*menu*/
 .starter,
 .meal,
 .desserts {
   margin-bottom: 50px;
+  animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
 }
+.meal1{
+  animation-delay: 0.16667s;
+}
+.meal2{
+  animation-delay: 0.33334s;
+}
+.meal3{
+  animation-delay: 0.5s;
+}
+.meal4{
+  animation-delay: 0.66667s;
+}
+.meal5{
+  animation-delay: 0.8s;
+}
+.meal6{
+  animation-delay: 1s;
+}
+.meal7{
+  animation-delay: 1.3s;
+}
+.meal8{
+  animation-delay: 1.5s;
+}
+.meal9{
+  animation-delay: 1.8s;
+}
+
 .meal-type {
   border-bottom: solid 2px #99e2d0;
   margin: 10px 10px 10px 25px;
   width: 50px;
   font-weight: lighter;
 }
-.meal__infos {
+.meal-box {
   box-shadow: 0 0 10px #ececec;
   margin: 5%;
   border-radius: 10px;
   background-color: white;
+  overflow: hidden;
+  justify-content: space-between;
+  position: relative;
+  top: 40px;
+  animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
+  &:hover .meal-logo {
+    opacity: 100;
+    transform: translate(-50px, 0);
+  }
 }
+.meal-box:hover .meal-price {
+  transform: translate(50px, 0);
+}
+.meal-box:hover .meal__description--text {
+  width: 200px;
+  overflow: hidden;
+  transition: width 400ms, text-overflow 400ms;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .mealname {
   margin: 0 0 0 10px;
   padding-top: 8px;
   font-weight: bold;
   font-size: large;
 }
-.description {
-  margin: 5px 0 0 10px;
-  padding-bottom: 8px;
+.meal__description--text {
+  margin: 5px 0 10px 10px;
+  width: 320px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
 }
-.description span {
+.meal-price {
   font-weight: bold;
-  margin-right: 10px;
+  transition-duration: 600ms;
+}
+.meal-logo {
+  opacity: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 65px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: white;
+  transition: transform 600ms ease-in-out;
+  position: absolute;
+  right: -60px;
+  overflow: hidden;
+  border-radius: 0 10px 10px 0;
 }
 /*button*/
 .order__page {
   height: 100px;
+}
+@keyframes move-card{
+0% {
+  opacity: 0;
+}
+100%{
+  transform: translateY(-40px);
+}
 }
