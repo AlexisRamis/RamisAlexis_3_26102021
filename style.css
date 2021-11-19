@@ -8,6 +8,81 @@ a {
   text-decoration: none;
 }
 
+.loadScreen {
+  background: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeout 0.2s 3s forwards;
+}
+
+.spinnerBig {
+  position: absolute;
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  border: 48px solid rgba(161, 160, 160, 0);
+  border-top: 48px solid #9356dc;
+  border-left: 48px solid #9356dc;
+  border-bottom: 48px solid #9356dc;
+  animation: spinneroff 0.8s 0.2s 2;
+}
+
+.spinner {
+  border: 32px solid rgba(161, 160, 160, 0);
+  border-top: 32px solid #ff79da;
+  border-right: 32px solid #ff79da;
+  border-bottom: 32px solid #ff79da;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  opacity: 1;
+  animation: spinner 0.8s 0.2s 2;
+  position: absolute;
+}
+
+.spinnerSmall {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 24px solid rgba(161, 160, 160, 0);
+  border-top: 24px solid #99e2d0;
+  border-left: 24px solid #99e2d0;
+  border-bottom: 24px solid #99e2d0;
+  animation: spinneroff 0.8s 0.2s 2;
+}
+
+@keyframes spinneroff {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*header*/
 .logo .logo__img {
   width: 50%;
@@ -39,6 +114,11 @@ a {
   background: linear-gradient(175deg, #ff79da 10%, #9356dc 95%);
   padding: 20px 40px 20px 40px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  filter: brightness(1.1);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 .button .order__button__span {
   font-weight: 900;
@@ -203,6 +283,70 @@ footer {
   justify-content: space-between;
 }
 
+/* responsive desktop */
+@media screen and (min-width: 1920px) {
+  .location {
+    width: 100%;
+  }
+
+  .logo .logo__img {
+    width: 20%;
+  }
+
+  .howto .howto__step {
+    padding-left: 50px;
+    margin-left: 10%;
+  }
+
+  .howto .howto__h2 {
+    margin-left: 150px;
+  }
+
+  .titlerestaurants {
+    margin-left: 130px;
+  }
+
+  .responsive4k {
+    display: flex;
+    justify-content: center;
+    margin-left: -8%;
+  }
+
+  .img-restaurants img {
+    width: 800px;
+  }
+
+  .new {
+    right: auto;
+  }
+
+  .new1 {
+    width: 10%;
+  }
+
+  .new2 {
+    width: 10%;
+  }
+
+  footer {
+    width: 100% px;
+  }
+}
+/* responsive tablette */
+@media screen and (min-width: 768px) and (max-device-width: 768px) {
+  .responsive4k {
+    display: block;
+  }
+
+  .img-restaurants img {
+    width: 720px;
+  }
+
+  .howto .howto__h2 {
+    display: flex;
+    text-align: center;
+  }
+}
 /*Header page*/
 .header {
   margin: 0;
@@ -361,6 +505,83 @@ footer {
   }
   100% {
     transform: translateY(-40px);
+  }
+}
+@media screen and (max-width: 375px) {
+  .meal-price {
+    margin-left: 0;
+  }
+
+  .meal__description--text {
+    width: 280px;
+  }
+
+  .meal-box:hover .meal__description--text {
+    width: 180px;
+  }
+}
+@media screen and (min-width: 768px) and (max-device-width: 768px) {
+  .title {
+    margin-bottom: 40%;
+    justify-content: center;
+  }
+
+  .title h2 {
+    margin-right: 30px;
+  }
+
+  .meal-type {
+    margin-left: 50px;
+  }
+
+  .meal-price {
+    margin-left: 320px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .logo {
+    justify-content: center;
+  }
+
+  .logopage .logo__img {
+    width: 80%;
+  }
+
+  .logo__i {
+    margin-left: -700px;
+    width: 150%;
+  }
+
+  .title {
+    margin-bottom: 20%;
+    justify-content: center;
+  }
+
+  .title h2 {
+    margin-right: 60px;
+  }
+
+  .starter,
+.meal,
+.desserts {
+    width: 30%;
+  }
+
+  .meal-type {
+    margin-left: 50px;
+  }
+
+  .meal-price {
+    margin-left: 150px;
+  }
+
+  .meal-infos {
+    width: 10%;
+  }
+
+  .menuresponsive {
+    display: flex;
+    justify-content: center;
   }
 }
 

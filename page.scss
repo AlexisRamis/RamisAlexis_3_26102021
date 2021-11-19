@@ -33,31 +33,31 @@
   margin-bottom: 50px;
   animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
 }
-.meal1{
+.meal1 {
   animation-delay: 0.16667s;
 }
-.meal2{
+.meal2 {
   animation-delay: 0.33334s;
 }
-.meal3{
+.meal3 {
   animation-delay: 0.5s;
 }
-.meal4{
+.meal4 {
   animation-delay: 0.66667s;
 }
-.meal5{
+.meal5 {
   animation-delay: 0.8s;
 }
-.meal6{
+.meal6 {
   animation-delay: 1s;
 }
-.meal7{
+.meal7 {
   animation-delay: 1.3s;
 }
-.meal8{
+.meal8 {
   animation-delay: 1.5s;
 }
-.meal9{
+.meal9 {
   animation-delay: 1.8s;
 }
 
@@ -128,11 +128,76 @@
 .order__page {
   height: 100px;
 }
-@keyframes move-card{
-0% {
-  opacity: 0;
+@keyframes move-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-40px);
+  }
 }
-100%{
-  transform: translateY(-40px);
+@media screen and (max-width: 375px) {
+  .meal-price{
+    margin-left: 0;
+  }
+  .meal__description--text {
+    width: 280px;
+  }
+  .meal-box:hover .meal__description--text {
+    width: 180px;
 }
+}
+@media screen and (min-width: 768px) and (max-device-width: 768px) {
+  .title {
+    margin-bottom: 40%;
+    justify-content: center;
+  }
+  .title h2 {
+    margin-right: 30px;
+  }
+  .meal-type {
+    margin-left: 50px;
+  }
+  .meal-price {
+    margin-left: 320px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .logo {
+    justify-content: center;
+  }
+  .logopage {
+    .logo__img {
+      width: 80%;
+    }
+  }
+  .logo__i {
+    margin-left: -700px;
+    width: 150%;
+  }
+  .title {
+    margin-bottom: 20%;
+    justify-content: center;
+  }
+  .title h2 {
+    margin-right: 60px;
+  }
+  .starter,
+  .meal,
+  .desserts {
+    width: 30%;
+  }
+  .meal-type {
+    margin-left: 50px;
+  }
+  .meal-price {
+    margin-left: 150px;
+  }
+  .meal-infos {
+    width: 10%;
+  }
+  .menuresponsive {
+    display: flex;
+    justify-content: center;
+  }
 }
