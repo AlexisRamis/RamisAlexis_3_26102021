@@ -97,27 +97,28 @@ a {
   .order__p {
     font-size: large;
   }
-  .explore {
-    margin-top: 50px;
-    padding-bottom: 50px;
-    .button {
-      border-radius: 30px 30px 30px 30px;
-      border: none;
-      background: linear-gradient(175deg, #ff79da 10%, #9356dc 95%);
-      padding: 20px 40px 20px 40px;
-      cursor: pointer;
-      transition: 0.2s ease-in-out;
-      &:hover {
-        filter: brightness(1.1);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-          rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-      }
-      .order__button__span {
-        font-weight: 900;
-      }
+}
+.explore {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  .button {
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    background: linear-gradient(175deg, #ff79da 10%, #9356dc 95%);
+    padding: 20px 40px 20px 40px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+    .order__button__span {
+      font-weight: 900;
     }
   }
 }
+
 /*how to*/
 .howto {
   .howto__h2 {
@@ -143,9 +144,9 @@ a {
         background: #f6f6f6;
         box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
         margin-left: 30px;
-        &:hover{
-        background-color: #F5EEFE;
-      }
+        &:hover {
+          background-color: #f5eefe;
+        }
         .howto__step__li__span {
           font-weight: 600;
         }
@@ -188,18 +189,52 @@ a {
 #restaurants figcaption {
   justify-content: space-between;
 }
-#restaurants i {
-  margin-top: 30px;
+.icon-stay {
+  position: absolute;
+  cursor: pointer;
+  opacity: 1;
+  font-size: 24px;
+  right: 24px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+.icon-stay:hover {
+  opacity: 0;
+}
+.icon-hover {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  font-size: 25px;
+  right: 24px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 1.2s ease;
+}
+.icon-hover:hover {
+  opacity: 1;
+}
+.fa-gradient {
+  background: linear-gradient(180deg, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.fa,
+.fas {
+  font-weight: 900;
+}
+.fa,
+.far,
+.fas {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-family: "Font Awesome 5 Free";
 }
 
-.icon-hover:hover .icon-hover-far,
-.icon-hover .icon-hover-fas {
-  display: none;
-}
-.icon-hover:hover .icon-hover-fas {
-  display: block;
-  color: #9257dc;
-}
 /*footer*/
 footer {
   background-color: #353434;
@@ -292,6 +327,14 @@ footer {
   }
   .new2 {
     width: 10%;
+  }
+  .icon-stay-responsive1,
+  .icon-hover-responsive1 {
+    right: 53%;
+  }
+  .icon-stay-responsive2,
+  .icon-hover-responsive2 {
+    right: 7.5%;
   }
 }
 /* responsive tablette */
