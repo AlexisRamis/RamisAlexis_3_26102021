@@ -128,15 +128,24 @@ h1 {
 }
 
 /*how to*/
+.howto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .howto .howto__h2 {
-  margin-left: 20px;
-  margin-top: 100px;
+  margin-top: 50px;
+  margin-left: 10px;
 }
 .howto .howto__step {
-  margin-left: -4%;
+  width: 100%;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 .howto .howto__step .howto__step__li {
   list-style-type: none;
+  width: 100%;
 }
 .howto .howto__step .howto__step__li .howto__step__li__p {
   background-color: #9257dc;
@@ -190,7 +199,6 @@ h1 {
   width: 100%;
   border-radius: 20px 20px 0 0;
   height: 200px;
-  margin-left: -15px;
 }
 
 #restaurants figcaption {
@@ -323,26 +331,26 @@ footer .contact {
     width: 20%;
   }
 
-  .howto .howto__step {
+  /*.howto .howto__step {
     padding-left: 50px;
     margin-left: 10%;
-  }
-
-  .howto .howto__h2 {
-    margin-left: 150px;
-  }
-
-  .titlerestaurants {
-    margin-left: 130px;
-  }
-
+    width: 50%;
+    .howto__step__li{
+      width: 50%;
+    }
+  }*/
   .responsive4k {
     display: flex;
     justify-content: center;
-    margin-left: -8%;
   }
 
-  .img-restaurants img {
+  .img-restaurants figure {
+    /* margin-block-start: 0;
+     margin-block-end: 0;
+     margin-inline-start: 0;
+     margin-inline-end: 0;*/
+  }
+  .img-restaurants figure .img-restaurants img {
     width: 800px;
   }
 
@@ -358,32 +366,63 @@ footer .contact {
     width: 10%;
   }
 
-  .icon-stay-responsive1,
-.icon-hover-responsive1 {
+  /*.icon-stay-responsive1,
+  .icon-hover-responsive1 {
     right: 53%;
   }
-
   .icon-stay-responsive2,
-.icon-hover-responsive2 {
+  .icon-hover-responsive2 {
     right: 19%;
-  }
+  }*/
 }
 /* responsive tablette */
-@media screen and (min-width: 768px) and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .responsive4k {
     display: block;
   }
 
   .img-restaurants img {
-    width: 720px;
+    width: 100%;
   }
 
-  .howto .howto__h2 {
+  /*.howto .howto__h2 {
     display: flex;
     text-align: center;
+    .howto .howto__step__li {
+      width: 60%;
+    }
+  }*/
+  .howto {
+    margin: auto;
+    width: 90%;
+    align-items: center;
+  }
+  .howto .howto__h2 {
+    margin-left: -30px;
+  }
+  .howto .howto__step {
+    width: 65%;
+    margin-left: 30px;
+  }
+  .howto .howto__step .howto__step__li {
+    width: 90%;
+    max-width: 380px;
+    margin: auto;
   }
 }
 /*Header page*/
+header a {
+  position: absolute;
+  top: 18px;
+  font-size: 30px;
+}
+header h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
 .header {
   margin: 0;
 }
@@ -406,8 +445,8 @@ footer .contact {
   justify-content: space-around;
   border-radius: 40px 40px 0 0;
   background-color: #f6f6f6;
-  top: 220px;
-  margin-bottom: 70%;
+  top: 200px;
+  margin-bottom: 40%;
   padding-top: 3%;
   font-family: Shrikhand;
 }
@@ -431,7 +470,6 @@ footer .contact {
 
 .meal-box {
   box-shadow: 0 0 10px #ececec;
-  margin: 5%;
   border-radius: 10px;
   background-color: white;
   overflow: hidden;
@@ -442,24 +480,17 @@ footer .contact {
 .meal-box:hover .meal-logo {
   opacity: 100;
   transform: translate(-50px, 0);
+}
+.meal-box:hover .meal-logo .fa-check-circle {
   animation-name: wiggle;
-  animation-duration: 1000ms;
+  animation-duration: 500ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes wiggle {
   0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-5deg);
+    transform: rotate(360deg);
   }
   100% {
     transform: rotate(0deg);
@@ -507,7 +538,7 @@ footer .contact {
   color: white;
   transition: transform 600ms ease-in-out;
   position: absolute;
-  right: -60px;
+  right: -40px;
   overflow: hidden;
   border-radius: 0 10px 10px 0;
 }
@@ -586,22 +617,48 @@ footer .contact {
     transform: translateY(-40px);
   }
 }
-@media screen and (max-width: 375px) {
-  .meal-price {
-    margin-left: 0;
+@media screen and (min-width: 375px) {
+  .title {
+    margin-bottom: 55%;
   }
 
   .meal__description--text {
     width: 280px;
   }
 
+  .meal-box {
+    margin-bottom: 10px;
+  }
+
   .meal-box:hover .meal__description--text {
     width: 180px;
   }
+
+  .meal-logo {
+    right: -65px;
+  }
+
+  .icon-stay-page,
+.icon-hover-page {
+    right: 30px;
+  }
+
+  .starter, .meal, .desserts {
+    margin: 10px;
+  }
+
+  .meal-price {
+    margin-left: 20px;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 768px) {
+@media screen and (min-width: 425px) {
+  .meal-price {
+    margin-left: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
   .title {
-    margin-bottom: 40%;
+    margin-bottom: 20px;
     justify-content: center;
   }
 
@@ -609,32 +666,28 @@ footer .contact {
     margin-right: 30px;
   }
 
+  .starter {
+    margin-top: 250px;
+  }
+
+  .starter, .meal, .desserts {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   .meal-type {
     margin-left: 50px;
   }
 
   .meal-price {
-    margin-left: 320px;
+    margin-left: 210px;
+  }
+
+  .meal-box {
+    margin: 25px;
   }
 }
-@media screen and (min-width: 1920px) {
-  .header__img {
-    top: 10%;
-  }
-
-  .logo {
-    justify-content: center;
-  }
-
-  .logo__img {
-    height: 100px;
-  }
-
-  .logo__i {
-    margin-left: -700px;
-    width: 150%;
-  }
-
+@media screen and (min-width: 1024px) {
   .title {
     margin-bottom: 15%;
     justify-content: center;
@@ -644,34 +697,41 @@ footer .contact {
     margin-right: 60px;
   }
 
-  .icon-stay-page,
-.icon-hover-page {
-    right: 40%;
-    top: 50%;
-  }
-
   .starter,
 .meal,
 .desserts {
-    width: 30%;
-    margin-left: 850px;
-  }
-
-  .meal-type {
-    margin-left: 50px;
-  }
-
-  .meal-price {
-    margin-left: 320px;
+    width: 80%;
+    margin: auto;
   }
 
   .meal-infos {
-    width: 10%;
+    width: 60%;
+  }
+
+  .meal-price {
+    margin-left: 430px;
   }
 
   .menuresponsive {
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .meal-price {
+    margin-left: 750px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .starter,
+.meal,
+.desserts {
+    width: 50%;
+    margin: auto;
+  }
+
+  .meal-price {
+    margin-left: 850px;
   }
 }
 
