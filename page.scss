@@ -49,6 +49,27 @@
   &:hover .meal-logo {
     opacity: 100;
     transform: translate(-50px, 0);
+    animation-name: wiggle;
+    animation-duration: 1000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 .meal-box:hover .meal-price {
@@ -96,7 +117,6 @@
 /*correction soutenance*/
 .meal1 {
   animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
-  animation-delay: 0;
 }
 .meal2 {
   animation: move-card 1s cubic-bezier(0, 0, 0, 1) forwards;
