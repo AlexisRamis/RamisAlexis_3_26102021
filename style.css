@@ -722,6 +722,18 @@ header h1 {
     margin-left: 750px;
   }
 }
+@media screen and (min-width: 1920px) {
+  .starter,
+.meal,
+.desserts {
+    width: 50%;
+    margin: auto;
+  }
+
+  .meal-price {
+    margin-left: 650px;
+  }
+}
 @media screen and (min-width: 2560px) {
   .starter,
 .meal,
@@ -731,7 +743,7 @@ header h1 {
   }
 
   .meal-price {
-    margin-left: 850px;
+    margin-left: 1020px;
   }
 }
 
