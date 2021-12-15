@@ -462,16 +462,27 @@ header h1 {
   top: 40px;
 }
 .meal-box:hover .meal-logo {
-  opacity: 100;
-  transform: translate(-50px, 0);
+  /*opacity: 100;
+  transform: translate(-50px, 0);}*/
+  animation: pop 1.2s forwards;
 }
 .meal-box:hover .meal-logo .fa-check-circle {
   animation-name: wiggle;
-  animation-duration: 500ms;
+  animation-duration: 600ms;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
 }
 
+@keyframes pop {
+  0% {
+    opacity: 100;
+    transform: translate(0);
+  }
+  100% {
+    opacity: 100;
+    transform: translate(-60px, 0);
+  }
+}
 @keyframes wiggle {
   0% {
     transform: rotate(360deg);
@@ -480,14 +491,13 @@ header h1 {
     transform: rotate(0deg);
   }
 }
-.meal-box:hover .meal-price {
+/*.meal-box:hover .meal-price {
   transform: translate(50px, 0);
-}
-
+}*/
 .meal-box:hover .meal__description--text {
   width: 200px;
   overflow: hidden;
-  transition: width 400ms, text-overflow 400ms;
+  transition: width 1200ms, text-overflow 1200ms;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -509,7 +519,7 @@ header h1 {
 
 .meal-price {
   font-weight: bold;
-  transition-duration: 600ms;
+  transition-duration: 1200ms;
 }
 
 .meal-logo {
@@ -632,7 +642,7 @@ header h1 {
   }
 
   .meal-price {
-    margin-left: 20px;
+    margin-left: 10px;
   }
 }
 @media screen and (min-width: 425px) {
@@ -703,7 +713,7 @@ header h1 {
 }
 @media screen and (min-width: 1440px) {
   .meal-price {
-    margin-left: 750px;
+    margin-left: 740px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -715,7 +725,7 @@ header h1 {
   }
 
   .meal-price {
-    margin-left: 570px;
+    margin-left: 550px;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -727,7 +737,7 @@ header h1 {
   }
 
   .meal-price {
-    margin-left: 885px;
+    margin-left: 875px;
   }
 }
 
